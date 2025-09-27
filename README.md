@@ -1,73 +1,98 @@
-# Welcome to your Lovable project
+# Sahara β Ultra-MVP Mental Health PWA
 
-## Project info
+Sahara is a **web-first Progressive Web App (PWA)** delivering AI first-aid mental health support, standardized screenings, peer interaction, counselor booking, and anonymized institutional insights.
 
-**URL**: https://lovable.dev/projects/c651cb75-acd4-4538-8631-2b6b640ef46c
+## 🚀 Quick Start
 
-## How can I edit this code?
+```bash
+# Clone and setup
+git clone <your-repo>
+cd sahara
+docker-compose up -d
 
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/c651cb75-acd4-4538-8631-2b6b640ef46c) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+# Frontend will be available at: http://localhost:3000
+# Backend API at: http://localhost:8000
+# API Docs at: http://localhost:8000/docs
 ```
 
-**Edit a file directly in GitHub**
+## 📁 Project Structure
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```
+SAHARA/                    # Root monorepo
+├── backend/              # FastAPI backend
+│   ├── app/
+│   │   ├── api/         # REST endpoints
+│   │   ├── core/        # Config & security
+│   │   ├── db/          # Database models
+│   │   ├── services/    # Business logic
+│   │   └── tests/       # Unit tests
+│   ├── requirements.txt
+│   └── Dockerfile
+├── frontend/             # React TypeScript PWA
+│   ├── src/
+│   │   ├── components/  # Reusable components
+│   │   ├── pages/       # Route pages
+│   │   ├── services/    # API calls
+│   │   └── stores/      # State management
+│   ├── package.json
+│   └── Dockerfile
+├── docker-compose.yml    # Development environment
+└── docs/                # Architecture & references
+```
 
-**Use GitHub Codespaces**
+## ✨ Features
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Core Features (MVP)
+- 🔐 Anonymous JWT authentication
+- 📋 Mental health screenings (PHQ-9, GAD-7, GHQ)
+- 🤖 AI-powered mental health chatbot
+- 💬 Moderated peer support channels
+- 📅 Counselor booking system
+- 📊 Anonymized institutional insights
 
-## What technologies are used for this project?
+### Technical Features
+- 📱 Progressive Web App (PWA)
+- 🌐 Offline-first with IndexedDB
+- 🌍 Internationalization (i18n) support
+- 🔒 Secure WebSocket connections
+- 📡 RESTful API with OpenAPI docs
+- 🧪 Comprehensive test coverage
 
-This project is built with:
+## 🛠 Technology Stack
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- **Frontend**: React 18, TypeScript, Tailwind CSS, PWA
+- **Backend**: FastAPI, SQLAlchemy, WebSockets
+- **Database**: SQLite (development), PostgreSQL (production)
+- **Auth**: JWT with anonymous sessions
+- **Real-time**: WebSocket connections
+- **Deployment**: Docker & Docker Compose
 
-## How can I deploy this project?
+## 📖 API Documentation
 
-Simply open [Lovable](https://lovable.dev/projects/c651cb75-acd4-4538-8631-2b6b640ef46c) and click on Share -> Publish.
+Once running, visit:
+- Interactive API docs: http://localhost:8000/docs
+- ReDoc format: http://localhost:8000/redoc
 
-## Can I connect a custom domain to my Lovable project?
+## 🌍 Internationalization
 
-Yes, you can!
+Currently supports:
+- English (en)
+- Spanish (es)
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🧪 Testing
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+```bash
+# Backend tests
+cd backend && python -m pytest
+
+# Frontend tests
+cd frontend && npm test
+```
+
+## 📄 License
+
+MIT License - see LICENSE file for details.
+
+## 🤝 Contributing
+
+Please read CONTRIBUTING.md for contribution guidelines.

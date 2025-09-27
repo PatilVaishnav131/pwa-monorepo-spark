@@ -22,6 +22,7 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          glow: "hsl(var(--primary-glow))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -38,6 +39,11 @@ export default {
         accent: {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
+          glow: "hsl(var(--accent-glow))",
+        },
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
+          foreground: "hsl(var(--warning-foreground))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -57,6 +63,21 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      backgroundImage: {
+        'gradient-primary': 'var(--gradient-primary)',
+        'gradient-healing': 'var(--gradient-healing)',
+        'gradient-calm': 'var(--gradient-calm)',
+        'gradient-ocean': 'var(--gradient-ocean)',
+      },
+      boxShadow: {
+        'gentle': 'var(--shadow-gentle)',
+        'healing': 'var(--shadow-healing)',
+        'warm': 'var(--shadow-warm)',
+      },
+      transitionTimingFunction: {
+        'calm': 'var(--transition-calm)',
+        'gentle': 'var(--transition-gentle)',
       },
       borderRadius: {
         lg: "var(--radius)",

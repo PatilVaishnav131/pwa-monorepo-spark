@@ -1,16 +1,17 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Heart, MessageCircle, FileText, Calendar, Users, BarChart3 } from "lucide-react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Button } from '../components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
+import { Heart, MessageCircle, FileText, Calendar, Users, BarChart3 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-const Index = () => {
+const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-calm">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-ocean px-6 py-20 text-white">
         <div className="mx-auto max-w-4xl text-center">
           <div className="mb-6">
-            <Heart className="mx-auto h-16 w-16 text-white/90" />
+            <Heart className="mx-auto h-16 w-16 text-white/90 gentle-pulse" />
           </div>
           <h1 className="mb-6 text-5xl font-bold leading-tight">
             Your Mental Health
@@ -121,7 +122,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            {/* Insights Dashboard */}
+            {/* Analytics */}
             <Card className="shadow-gentle hover:shadow-healing transition-all duration-300 border-0 md:col-span-2 lg:col-span-1">
               <CardHeader className="text-center pb-4">
                 <div className="mx-auto mb-4 h-12 w-12 rounded-full bg-gradient-primary flex items-center justify-center">
@@ -174,4 +175,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default HomePage;
